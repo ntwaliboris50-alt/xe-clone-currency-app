@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chris$Boris Current Change</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <img src="assets/mm.png" width="80" height="80" alt="Logo">
+     <h1>chris$Boris CURRENT CHANGE</h1>
+</header>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="converter.html">FULL CONVERTER</a>
+    <a href="details.html" class="active">CURRENCY DETAILS</a>
+    <a href="history.html">HISTORY</a>
+    <a href="setting.html">SETTING</a>
+</nav>
+<main>
+    <div class="details-header">
+        <div class="search-bar">
+            <input type="text" id="searchCurrency" placeholder="Search currency by name or code..." onkeyup="filterCurrencyTable()">
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table id="currencyTable">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Currency</th>
+                    <th>Code</th>
+                    <th>Rate (1 USD)</th>
+                    <th>Trend</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody id="currencyTableBody"></tbody>
+        </table>
+    </div>
+    <div class="trend-section">
+        <h3>Exchange Rate Trends (Last 7 Days)</h3>
+        <div class="table-container">
+            <table class="trend-table">
+                <thead>
+                    <tr><th>Day</th><th>USD to RWF</th><th>USD to EUR</th><th>Change</th></tr>
+                </thead>
+                <tbody id="trendBody"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 chris$Boris  Current Change.</p>
+        <p>Email: chris$Boriscurrentchange@gmail.com | Phone: 0788888888</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

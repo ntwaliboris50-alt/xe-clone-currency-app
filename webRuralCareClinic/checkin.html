@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Returning Patient</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Arial;background:#eaeaea;}
+
+/* HEADER */
+.topbar{
+    background:#0fb14a;
+    padding:15px;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width:80px;height:80px;background:white;border-radius:50%;
+    display:flex;justify-content:center;align-items:center;margin-right:15px;
+}
+
+.logo i{color:#0fb14a;font-size:40px;}
+
+.title-box{
+    background:#4a86c5;
+    color:white;
+    padding:15px 25px;
+    border-radius:5px;
+    width:80%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.lang{
+    background:#2e6fb3;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* LAYOUT */
+.container{display:flex;}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#f5f5f5;
+    padding:15px;
+    height:100vh;
+}
+
+.sidebar a{
+    display:block;
+    padding:10px;
+    color:#2a5bd7;
+    text-decoration:none;
+}
+
+.sidebar a:hover{background:#ddd;}
+
+.quick{margin-top:30px;font-size:14px;}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+    text-align:center;
+}
+
+/* SEARCH BOX */
+.search-box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    width:70%;
+    margin:auto;
+}
+
+.search-title{
+    text-align:left;
+    color:#6aa84f;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.search-input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+}
+
+/* PATIENT CARD */
+.patient{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+/* LEFT SIDE */
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#7bbf42;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.info h4{margin:0;}
+.info small{color:#666;}
+
+/* RIGHT */
+.select{
+    color:#6aa84f;
+    cursor:pointer;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topbar">
+    <div class="logo"><i class="fa fa-plus"></i></div>
+
+    <div class="title-box">
+        <div>
+            <strong>Rural Care Clinic</strong><br>
+            <small>Digital Patient Check-in System</small>
+        </div>
+        <div class="lang">🌐 English</div>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <a href="unknown.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+    <a href="newpatient.html"><i class="fa-solid fa-user-plus"></i> New patient</a>
+    <a href="checkin.html"><i class="fa-solid fa-repeat"></i> Returning patient</a>
+    <a href="today'squeue.html"><i class="fa-solid fa-list"></i> Today’s queue</a>
+    <a href="report.html"><i class="fa-solid fa-chart-bar"></i> Reports</a>
+    <a href="settings.html"><i class="fa-solid fa-gear"></i> Setting</a>
+
+    <div class="quick">
+        <p><b>Quick Stats</b></p>
+        <p>Patients Today: <span style="color:blue">47</span></p>
+        <p>In Queue: <span style="color:orange">12</span></p>
+        <p>Avg Wait: <span style="color:green">25 min</span></p>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<h1>Returning patient check-in</h1>
+<p>Quick check-in for existing patients</p>
+
+<div class="search-box">
+
+<div class="search-title">🔍 Find Patient</div>
+
+<input class="search-input" placeholder="Search by name or phone number...">
+
+<!-- PATIENT 1 -->
+<div class="patient">
+    <div class="left">
+        <div class="avatar">GM</div>
+        <div class="info">
+            <h4>Grace Mukamana</h4>
+            <small>📞 +250788123456 | 📍 Rwamagana Village</small><br>
+            <small>DOB: 1982-05-15 | Gender: female</small>
+        </div>
+    </div>
+    <div class="select">Select →</div>
+</div>
+
+<!-- PATIENT 2 -->
+<div class="patient">
+    <div class="left">
+        <div class="avatar">JN</div>
+        <div class="info">
+            <h4>Jean Niyonzima</h4>
+            <small>📞 +250788234567 | 📍 Kayonza District</small><br>
+            <small>DOB: 1975-08-22 | Gender: male</small>
+        </div>
+    </div>
+    <div class="select">Select →</div>
+</div>
+
+<!-- PATIENT 3 -->
+<div class="patient">
+    <div class="left">
+        <div class="avatar">MU</div>
+        <div class="info">
+            <h4>Marie Uwimana</h4>
+            <small>📞 +250788345678 | 📍 Rusumo Sector</small><br>
+            <small>DOB: 1990-12-03 | Gender: female</small>
+        </div>
+    </div>
+    <div class="select">Select →</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

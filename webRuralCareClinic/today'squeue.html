@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Queue Management</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Arial;background:#eaeaea;}
+
+/* HEADER */
+.topbar{
+    background:#0fb14a;
+    padding:15px;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width:80px;height:80px;background:white;border-radius:50%;
+    display:flex;justify-content:center;align-items:center;margin-right:15px;
+}
+
+.logo i{color:#0fb14a;font-size:40px;}
+
+.title-box{
+    background:#4a86c5;
+    color:white;
+    padding:15px 25px;
+    border-radius:5px;
+    width:80%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.lang{
+    background:#2e6fb3;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* LAYOUT */
+.container{display:flex;}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#f5f5f5;
+    padding:15px;
+    height:100vh;
+}
+
+.sidebar a{
+    display:block;
+    padding:10px;
+    color:#2a5bd7;
+    text-decoration:none;
+}
+
+.sidebar a:hover{background:#ddd;}
+
+.quick{margin-top:30px;font-size:14px;}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+    text-align:center;
+}
+
+/* STAT CARDS */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:20px 0;
+}
+
+.stat{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    width:120px;
+}
+
+.stat h3{margin:5px 0;}
+
+/* TABS */
+.tabs{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin:20px 0;
+}
+
+.tab{
+    padding:8px 12px;
+    background:#ddd;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.tab.active{
+    background:#4a86c5;
+    color:white;
+}
+
+/* QUEUE BOX */
+.queue{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    width:70%;
+    margin:auto;
+    text-align:left;
+}
+
+/* PATIENT */
+.patient{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.patient:last-child{border:none;}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.badge{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.purple{background:#9b59b6;}
+.orange{background:#e67e22;}
+
+.status{
+    padding:5px 10px;
+    border-radius:15px;
+    color:white;
+    font-size:12px;
+}
+
+.waiting{background:#e67e22;}
+.progress{background:#9b59b6;}
+.done{background:#2ecc71;}
+
+.note{
+    font-size:12px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topbar">
+    <div class="logo"><i class="fa fa-plus"></i></div>
+
+    <div class="title-box">
+        <div>
+            <strong>Rural Care Clinic</strong><br>
+            <small>Digital Patient Check-in System</small>
+        </div>
+        <div class="lang">🌐 English</div>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<a href="unknown.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+    <a href="newpatient.html"><i class="fa-solid fa-user-plus"></i> New patient</a>
+    <a href="checkin.html"><i class="fa-solid fa-repeat"></i> Returning patient</a>
+    <a href="today'squeue.html"><i class="fa-solid fa-list"></i> Today’s queue</a>
+    <a href="report.html"><i class="fa-solid fa-chart-bar"></i> Reports</a>
+    <a href="settings.html"><i class="fa-solid fa-gear"></i> Setting</a>
+    <div class="quick">
+        <p><b>Quick Stats</b></p>
+        <p>Patients Today: <span style="color:blue">47</span></p>
+        <p>In Queue: <span style="color:orange">12</span></p>
+        <p>Avg Wait: <span style="color:green">25 min</span></p>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<h1>Queue management</h1>
+<p>Manage today’s patient queue</p>
+
+<div class="stats">
+    <div class="stat"><small>Total</small><h3>3</h3></div>
+    <div class="stat"><small>Waiting</small><h3>2</h3></div>
+    <div class="stat"><small>In Progress</small><h3>1</h3></div>
+    <div class="stat"><small>Completed</small><h3>0</h3></div>
+</div>
+
+<div class="tabs">
+    <div class="tab active">All (3)</div>
+    <div class="tab">Waiting (2)</div>
+    <div class="tab">In Progress (1)</div>
+    <div class="tab">Completed (0)</div>
+</div>
+
+<div class="queue">
+
+<div class="patient">
+    <div class="left">
+        <div class="badge purple">3</div>
+        <div>
+            <strong>Grace Mukamana</strong>
+            <div class="note">Currently in consultation</div>
+        </div>
+    </div>
+    <div class="status progress">In Progress</div>
+</div>
+
+<div class="patient">
+    <div class="left">
+        <div class="badge orange">4</div>
+        <div>
+            <strong>Jean Niyonzima</strong>
+            <div class="note">Estimated wait: 5 min</div>
+        </div>
+    </div>
+    <div class="status waiting">Waiting</div>
+</div>
+
+<div class="patient">
+    <div class="left">
+        <div class="badge orange">5</div>
+        <div>
+            <strong>Marie Uwimana</strong>
+            <div class="note">Estimated wait: 5 min</div>
+        </div>
+    </div>
+    <div class="status waiting">Waiting</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

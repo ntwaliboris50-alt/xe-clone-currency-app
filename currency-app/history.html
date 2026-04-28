@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chris$Boris Current Change</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <img src="assets/mm.png" width="80" height="80" alt="Logo">
+    <h1>chris$Boris CURRENT CHANGE</h1>
+</header>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="converter.html">FULL CONVERTER</a>
+    <a href="details.html">CURRENCY DETAILS</a>
+    <a href="history.html" class="active">HISTORY</a>
+    <a href="setting.html">SETTING</a>
+</nav>
+<main>
+    <div class="history-header">
+        <div class="history-controls">
+            <div class="filter-group">
+                <label>Filter by:</label>
+                <select id="currencyFilter" onchange="filterHistory()">
+                    <option value="all">All Currencies</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="RWF">RWF</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CNY">CNY</option>
+                    <option value="INR">INR</option>
+                </select>
+            </div>
+            <button onclick="clearHistory()" class="clear-btn">CLEAR ALL</button>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Date & Time</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Amount</th>
+                    <th>Result</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <tbody id="historyList"></tbody>
+        </table>
+    </div>
+    <div id="emptyMsg" class="empty-state" style="display:none;">
+        <div class="empty-icon">📭</div>
+        <p>No conversion history found</p>
+        <p>Go to Converter to make your first conversion</p>
+    </div>
+</main>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 chris$Boris Current Change.</p>
+        <p>Email:chris$Boriscurrentchange@gmail.com | Phone: 0788888888</p>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

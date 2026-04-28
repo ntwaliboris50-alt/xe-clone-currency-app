@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chris$Boris Current Change</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <img src="assets/mm.png" width="80" height="80" alt="Logo">
+     <h1>chris$Boris CURRENT CHANGE</h1>
+</header>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="converter.html">FULL CONVERTER</a>
+    <a href="details.html">CURRENCY DETAILS</a>
+    <a href="history.html">HISTORY</a>
+    <a href="setting.html" class="active">SETTING</a>
+</nav>
+<main>
+    <div class="settings-header">
+    </div>
+    <div class="settings-grid">
+        <div class="setting-card">
+            <div class="card-icon">🌓</div>
+            <h3>Appearance</h3>
+            <div class="button-group">
+                <button onclick="setDarkMode()" class="theme-btn dark-btn">Dark Mode</button>
+                <button onclick="setLightMode()" class="theme-btn light-btn">Light Mode</button>
+            </div>
+        </div>
+        <div class="setting-card">
+            <div class="card-icon">💱</div>
+            <h3>Default Currency</h3>
+            <select id="defaultCurrency" onchange="saveDefaultCurrency()" class="currency-selector">
+                <option value="USD">USD - US Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="RWF">RWF - Rwandan Franc</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+                <option value="INR">INR - Indian Rupee</option>
+            </select>
+            <p class="info-text">Pre-selected in the converter "From" field</p>
+        </div>
+        <div class="setting-card">
+            <div class="card-icon">🌐</div>
+            <h3>Language</h3>
+            <div class="button-group">
+                <button onclick="setLanguage('en')" class="lang-btn">English</button>
+                <button onclick="setLanguage('sw')" class="lang-btn">Swahili</button>
+                <button onclick="setLanguage('rw')" class="lang-btn">Kinyarwanda</button>
+            </div>
+            <p class="info-text" id="languageText">Current: English</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 chris$Boris Current Change.</p>
+        <p>Email: chris$Boriscurrentchange@gmail.com | Phone: 0788888888</p>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
