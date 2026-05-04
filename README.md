@@ -1,6 +1,6 @@
 STUDENTS NAME
 1.NDAHAYO CHRISTIAN
-2.NTWAli BORIS
+2.NTWAli BORIS 
 
 chris$Boris  Current Exchange is a complete currency converter system designed to provide real-time exchange rates and conversion history. You can convert money from different countries - the choice is yours. Learn different currency rates and how they change over time. All your conversion history is automatically saved in your browser.
         We support over 12 major currencies including US Dollar, Euro, British Pound, Japanese Yen, Rwandan Franc, Canadian Dollar, Australian Dollar, Swiss Franc, Chinese Yuan, Indian Rupee, Ugandan Shilling, and Congolese Franc. Our platform is designed to be fast, reliable, and completely free to use. No registration required, no hidden fees - just pure currency conversion at your fingertips.
